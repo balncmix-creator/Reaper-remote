@@ -1,6 +1,6 @@
 # REAPER Remote
 
-A lightweight Android remote for REAPER's built-in Web Control interface.
+A lightweight Android remote for REAPER's built-in Web Control interface. It supports REAPER running on **Windows and macOS** (and should also work with other REAPER platforms that expose the same Web Control interface).
 
 ## Current version
 
@@ -12,10 +12,10 @@ GitHub Actions builds a debug APK on every push to `main` and on manual dispatch
 
 ## Setup
 
-1. In REAPER, open Preferences → Control/OSC/web → Add → Web browser interface.
-2. Note the Web Control port (default commonly 8080).
-3. Install Tailscale on the Windows PC and Android phone and sign in to the same tailnet.
-4. In the app, enter the PC's Tailscale IP and Web Control port, then tap Connect.
+1. On Windows or macOS, open REAPER Preferences → Control/OSC/web → Add → Web browser interface.
+2. Note the Web Control port configured on that REAPER machine.
+3. Install Tailscale on the REAPER computer (Windows or Mac) and Android phone; sign in to the same tailnet.
+4. In the app, enter the computer's Tailscale IP or MagicDNS hostname and Web Control port, then tap Connect.
 
 **Security:** Do not forward the REAPER Web Control port on your router or expose it to the public internet. Use a private VPN such as Tailscale.
 
