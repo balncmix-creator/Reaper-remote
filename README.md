@@ -4,7 +4,7 @@ A lightweight Android remote for REAPER's built-in Web Control interface.
 
 ## Current version
 
-The initial app provides transport controls, marker navigation, and a live transport-position/status display. It is an early build; test it on your REAPER setup before relying on it in a session.
+The initial app provides transport controls, marker navigation, and a basic connection test. It is an early build; test the command mappings on your REAPER setup before relying on it in a session.
 
 ## Build
 
