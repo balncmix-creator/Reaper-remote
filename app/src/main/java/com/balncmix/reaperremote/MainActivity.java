@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
         status = label("Not connected", 14, 0xffbbbbbb);
         status.setPadding(0,14,0,14);
         root.addView(status);
-        connect.setOnClickListener(v -> send("play", true));
+        connect.setOnClickListener(v -> send("", true));
 
         root.addView(label("TRANSPORT", 11, 0xffe05a5a));
         LinearLayout r1 = row(root);
@@ -92,8 +92,7 @@ public class MainActivity extends Activity {
         String h=host.getText().toString().trim(), p=port.getText().toString().trim();
         if(h.isEmpty() || p.isEmpty()) { status.setText("Enter the PC address and port first"); return; }
         String base=h.contains("://") ? h : "http://"+h;
-        String path=command.matches("[0-9]+") ? "/_/"+command : "/_/ "+command;
-        path=path.replace("/_/ ","/_/");
+        String path=command.isEmpty() ? "/" : (command.matches("[0-9]+") ? "/_/"+command : "/_/ "+command).replace("/_/ ","/_/");
         new Thread(() -> {
             String message;
             try {
