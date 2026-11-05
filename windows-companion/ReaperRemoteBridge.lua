@@ -58,10 +58,10 @@ end
 
 local function run_action(name, args)
   args = args or {}
-  if name == "play" then reaper.OnPlayButton()
-  elseif name == "pause" then reaper.OnPauseButton()
-  elseif name == "stop" then reaper.OnStopButton()
-  elseif name == "record" then reaper.On録Button()
+  if name == "play" then reaper.Main_OnCommand(1007, 0)
+  elseif name == "pause" then reaper.Main_OnCommand(1008, 0)
+  elseif name == "stop" then reaper.Main_OnCommand(1016, 0)
+  elseif name == "record" then reaper.Main_OnCommand(1013, 0)
   elseif name == "next_marker" then reaper.Main_OnCommand(40173, 0)
   elseif name == "prev_marker" then reaper.Main_OnCommand(40172, 0)
   elseif name == "project_open" and args.path then reaper.Main_openProject(args.path)
